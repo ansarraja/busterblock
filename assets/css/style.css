@@ -1,0 +1,79 @@
+/* CSS Reset */
+:root {
+    box-sizing: border-box;
+    line-height: 1;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Reusable CSS */
+
+
+/* HTML CSS */
+
+h1 {
+    color: rgb(180, 149, 12);
+}
+
+header {
+    background-color: rgb(37, 37, 37);
+}
+
+/* CSS Animations */
+
+
+/* Navigation CSS */
+
+.navlinks a {
+    margin: 20px;
+    padding: 20px;
+    color: #CBB26B;
+    font-size: clamp(16px, 2.5vh, 25px);
+}
+
+.navlinks a:hover {
+    border: 1px solid #CBB26B;
+}
+
+#logo {
+    height: 150px;
+    width: 200px;
+    border-radius: 20%;
+}
+
+
+/* Main content CSS */
+
+.welcome-banner {
+    margin: 100px 0;
+}
+
+.content-search div {
+    margin: 100px 0;
+}
+
+.film-category div {
+    height: 100px;
+    background-color: gray;
+    margin: 30px;
+    width: 200px;
+}
+
+.film-search {
+    width: 50vh;
+    justify-content: center;
+}
+
+
+/* Footer CSS */
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
