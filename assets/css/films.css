@@ -54,7 +54,17 @@
  background-color: #CBB26B;
  border: none;
  cursor: pointer;
+ color:#ffffff
 }
+
+.add_btn button {
+ background-color: #CBB26B;
+ margin-left:10%;
+ border: none;
+ cursor: pointer;
+ color:#ffffff
+}
+
 
 #result {
  color: #ffffff;
@@ -140,7 +150,9 @@ p {
 @media screen and (max-width: 768px) {
  .container {
   font-size: .75em;
-  flex: 0 0 100%;
+  /* flex: 0 0 80%; */
+  /* position: relative; */
+  max-height:fit-content;
   
  }
 
@@ -155,7 +167,7 @@ p {
 
  .poster {
   margin: auto;
-  width: auto;
+  width: 20%;
   max-height: 10.8vh;
  }
 }
