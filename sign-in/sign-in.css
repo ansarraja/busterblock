@@ -1,0 +1,40 @@
+.sign-in-btn,
+.sign-up-btn {
+    font-size: 35px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.sign-in-btn:hover,
+.sign-up-btn:hover {
+    border-radius: 50px;
+}
+
+.sign-in-btn {
+    background-color: black;
+    color: #CBB26B;
+}
+
+.sign-up-btn {
+    background-color: rgb(40, 145, 40);
+    color: white;
+}
+
+.sign-in-container,
+.sign-in-container {
+    height: 300px;
+    margin: 50px 0;
+}
+
+
+.green-tick {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;    
+}
+
+.green-tick p {
+    color: white;
+    font: 30px;
+}
