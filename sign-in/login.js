@@ -6,21 +6,13 @@ export const logIn = (event, form, mainEl) => {
 
     let getUsersArr = JSON.parse(localStorage.getItem('users'));
 
-    console.log(getUsersArr);
-
-    console.log(emailInput);
+    let warningEl = $("#warning");
 
     const isCorrectEmail = getUsersArr.find(({ email }) => email === emailInput);
 
-    console.log(isCorrectEmail);
-
-    if(!isCorrectEmail.email || !(isCorrectEmail.password === passwordInput)) {
-
-        let warningEl = $('<p>');
+    if(!isCorrectEmail || !(isCorrectEmail.password === passwordInput)) {
 
         warningEl.text("Password or email are not correct - please check");
-
-        form.append(warningEl);
 
     }
 

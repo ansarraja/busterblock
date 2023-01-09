@@ -1,8 +1,20 @@
+body {
+    background-color: #CBB26B;
+}
+
+.login-card {
+    height: 90%;
+    width: 90%;
+    background-color:  #201F28;
+    border-radius: 10px;
+}
+
 .sign-in-btn,
 .sign-up-btn {
     font-size: 35px;
     padding: 20px;
     border-radius: 20px;
+    
 }
 
 .sign-in-btn:hover,
@@ -13,6 +25,7 @@
 .sign-in-btn {
     background-color: black;
     color: #CBB26B;
+    border: 1px solid #CBB26B;
 }
 
 .sign-up-btn {
@@ -21,7 +34,7 @@
 }
 
 .sign-in-container,
-.sign-in-container {
+.sign-up-container {
     height: 300px;
     margin: 50px 0;
 }
@@ -37,4 +50,69 @@
 .green-tick p {
     color: white;
     font: 30px;
+}
+
+#create-account-btn {
+    width: 200px;
+}
+
+.please-sign-in {
+    background-color: #201F28;
+    color: #CBB26B;
+    padding: 20px;
+    font-size: 25px;
+    border: 1px solid #CBB26B;
+    border-radius: 10px;
+}
+
+.form-container {
+    width: clamp(300px, 70%, 600px);
+    background-color: #201F28;
+    color: white;
+    margin: 50px 0;
+    border-radius: 10px;
+}
+
+.form-container form {
+    margin: 30px;
+}
+
+.form-container button {
+    margin: 20px 0;
+    width: 100px;
+    font-size: 20px;
+    color: #CBB26B;
+    background-color: black;
+    border-radius: 10px;
+    border: solid 1px #CBB26B;
+    padding: 20px;
+}
+
+.form-content-container {
+    width: 100%;
+}
+
+.welcome-container {
+    width: 100%;
+}
+
+.welcome-card {
+    height: 300px;
+    width: 90%;
+    background-color: #201F28;
+    border-radius: 10px;
+    margin: 100px 0;
+}
+
+.welcome-card h2 {
+    color: white;
+}
+
+.welcome-card button {
+    font-size: 25px;
+    color: #CBB26B;
+    background-color: black;
+    border: 1px solid #CBB26B;
+    border-radius: 5px;
+    margin: 35px;
 }

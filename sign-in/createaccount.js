@@ -1,6 +1,4 @@
-export const createAccount = (event, form, mainEl) => {
-
-    
+export const createAccount = (event, form, mainEl) => {    
 
     const name = document.getElementById('name').value;
 
@@ -10,18 +8,51 @@ export const createAccount = (event, form, mainEl) => {
 
     const passwordConfirm = document.getElementById('password-confirm').value;
 
+    const warningEl = $('#warning');
+
     if(password != passwordConfirm) {
-
-        // event.preventDefault();
-
-        let warningEl = $('<p>');
 
         warningEl.text("Password and Password Confirmation are not the same - please check");
 
-        form.append(warningEl);
     }
 
     else {
+        let user = {
+
+            name: name,
+    
+            email: email,
+    
+            password: password
+    
+        }
+    
+        let users = localStorage.getItem('users');
+    
+        let usersArr = [];
+    
+        if(!users) {
+    
+            usersArr.push(user);
+    
+            let usersArrStr = JSON.stringify(usersArr);
+    
+            localStorage.setItem('users', usersArrStr);
+    
+        }
+    
+        else {
+    
+            usersArr = JSON.parse(users);
+    
+            usersArr.push(user);
+    
+            let usersArrStr = JSON.stringify(usersArr);
+            
+            localStorage.setItem('users', usersArrStr);
+    
+        }
+    
 
         mainEl.empty();
 
@@ -40,6 +71,7 @@ export const createAccount = (event, form, mainEl) => {
 
         let pleaseSignIn = $('<button>')
         pleaseSignIn.text("Please Sign In");
+        pleaseSignIn.addClass('please-sign-in');
 
         pleaseSignIn.on('click', () => {
 
@@ -56,43 +88,5 @@ export const createAccount = (event, form, mainEl) => {
         mainEl.append(responseContainer);
 
     }
-
-    let user = {
-
-        name: name,
-
-        email: email,
-
-        password: password
-
-    }
-
-    let users = localStorage.getItem('users');
-
-    let usersArr = [];
-
-    if(!users) {
-
-        usersArr.push(user);
-
-        let usersArrStr = JSON.stringify(usersArr);
-
-        localStorage.setItem('users', usersArrStr);
-
-    }
-
-    else {
-
-        usersArr = JSON.parse(users);
-
-        usersArr.push(user);
-
-        let usersArrStr = JSON.stringify(usersArr);
-        
-        localStorage.setItem('users', usersArrStr);
-
-    }
-
-    console.log(name + email + password + passwordConfirm);
 
 }

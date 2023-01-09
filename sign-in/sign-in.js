@@ -9,6 +9,9 @@ import { createForm } from "./createform.js";
 
     if(!logIn) {
 
+        const signUpCard = $('<div>');
+        signUpCard.addClass('login-card d-flex justify-content-center align-items-center');
+
         const signInContainer = $('<div>');
         signInContainer.addClass('col-md-6 col-12 d-flex justify-content-center align-items-center sign-in-container');
     
@@ -22,9 +25,14 @@ import { createForm } from "./createform.js";
             createForm(true, mainEl);
     
         })
-    
-        signInContainer.append(signInButton);
+
+        signUpCard.append(signInButton);
+        signInContainer.append(signUpCard);
+
         mainEl.append(signInContainer);
+
+        const signInCard = $('<div>');
+        signInCard.addClass('login-card d-flex justify-content-center align-items-center');
     
         const signUpContainer = $('<div>');
         signUpContainer.addClass('col-md-6 col-12 d-flex justify-content-center align-items-center sign-up-container');
@@ -39,17 +47,25 @@ import { createForm } from "./createform.js";
             createForm(false, mainEl);
     
         })
-    
-        signUpContainer.append(signUpButton);
+
+        signInCard.append(signUpButton);
+        signUpContainer.append(signInCard);
+
         mainEl.append(signUpContainer);
         
     }
 
     else {
 
+        const welcomeContainer = $('<div>');
+        welcomeContainer.addClass('welcome-container d-flex justify-content-center align-items-center');
+
+        const welcomeCard = $('<div>');
+        welcomeCard.addClass('welcome-card d-flex flex-column justify-content-center align-items-center');
+
         const welcomeMessage = $('<h2>');
 
-        welcomeMessage.text(`Hello ${logIn}, Welcome back`);
+        welcomeMessage.text(`Hello ${logIn}, Welcome back!`);
 
         const logOutBtn = $('<button>');
         logOutBtn.text("Log Out");
@@ -63,46 +79,13 @@ import { createForm } from "./createform.js";
 
         })
 
-        mainEl.append(welcomeMessage, logOutBtn);
+        welcomeCard.append(welcomeMessage, logOutBtn);
+
+        welcomeContainer.append(welcomeCard);
+
+        mainEl.append(welcomeContainer);
 
     }
     
-
-    // const signInContainer = $('<div>');
-    // signInContainer.addClass('col-md-6 col-12 d-flex justify-content-center align-items-center sign-in-container');
-
-    // const signInButton = $('<button>');
-    // signInButton.text('Sign In');
-    // signInButton.addClass('sign-in-btn')
-    // signInButton.attr('id', 'sign-in');
-
-    // signInButton.on('click', () => {
-
-    //     createForm(true, mainEl);
-
-    // })
-
-    // signInContainer.append(signInButton);
-    // mainEl.append(signInContainer);
-
-    // const signUpContainer = $('<div>');
-    // signUpContainer.addClass('col-md-6 col-12 d-flex justify-content-center align-items-center sign-up-container');
-
-    // const signUpButton = $('<button>');
-    // signUpButton.text('Create Account');
-    // signUpButton.addClass('sign-up-btn')
-    // signUpButton.attr('id', 'sign-up');
-
-    // signUpButton.on('click', () => {
-
-    //     createForm(false, mainEl);
-
-    // })
-
-    // signUpContainer.append(signUpButton);
-    // mainEl.append(signUpContainer);
-   
-
-
 
 })();

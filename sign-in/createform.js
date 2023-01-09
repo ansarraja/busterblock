@@ -7,6 +7,12 @@ export const createForm = (isRegistered, mainEl) => {
 
     const form = $('<form>');
     form.addClass('d-flex flex-column')
+
+    const formContentContainer = $('<div>');
+    formContentContainer.addClass('form-content-container d-flex justify-content-center align-items-center');
+
+    const formContainer = $('<div>');
+    formContainer.addClass('form-container');
     
     if(!isRegistered) {
 
@@ -44,7 +50,11 @@ export const createForm = (isRegistered, mainEl) => {
 
         let createAccountBtn = $('<button>');
         createAccountBtn.text("Create My Account");
+        createAccountBtn.attr('id', 'create-account-btn')
         createAccountBtn.attr('type', 'submit');
+
+        let warningEl = $('<p>');
+        warningEl.attr('id', 'warning');
 
         createAccountBtn.on('click', (event) => {
             
@@ -54,9 +64,15 @@ export const createForm = (isRegistered, mainEl) => {
 
         })
 
-        form.append(heading, nameLabel, nameInput, emailLabel, emailInput, passwordLabel, passwordInput, passwordConfirmLabel, passwordConfirmInput, createAccountBtn);
+        
 
-        mainEl.append(form);
+        form.append(heading, nameLabel, nameInput, emailLabel, emailInput, passwordLabel, passwordInput, passwordConfirmLabel, passwordConfirmInput, createAccountBtn, warningEl);
+
+        formContainer.append(form);
+
+        formContentContainer.append(formContainer);
+
+        mainEl.append(formContentContainer);
 
     }
 
@@ -84,15 +100,23 @@ export const createForm = (isRegistered, mainEl) => {
         logInBtn.text("Log In");
         logInBtn.attr('type', 'submit');
 
+        let warningEl = $('<p>');
+        warningEl.attr('id', 'warning');
+        
+
         logInBtn.on('click', (event) => {
             event.preventDefault();
             logIn(event, form, mainEl);
 
         })
 
-        form.append(heading, emailLabel, emailInput, passwordLabel, passwordInput, logInBtn);
+        form.append(heading, emailLabel, emailInput, passwordLabel, passwordInput, logInBtn, warningEl);
+        
+        formContainer.append(form);
 
-        mainEl.append(form);
+        formContentContainer.append(formContainer);
+
+        mainEl.append(formContentContainer);
     }
 
 };
