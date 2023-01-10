@@ -5,9 +5,9 @@
     color: black;
 }
 body {
-    height: 100vh;
-    background: linear-gradient(#000000 50%, #CBB26B 50%);
-   }
+ height: 100vh;
+ background: linear-gradient(#000000 50%, #CBB26B 50%);
+}
 
 a {
     text-decoration: none;
