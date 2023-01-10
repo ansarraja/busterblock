@@ -6,7 +6,8 @@
 }
 body {
  height: 100vh;
- background: linear-gradient(#000000 50%, #CBB26B 50%);
+ /* background: linear-gradient(#000000 50%, #CBB26B 50%); */
+ background-color: #CBB26B;
 }
 
 a {
@@ -46,15 +47,20 @@ header {
 
 #logo {
     height: 150px;
-    width: 200px;
-    border-radius: 20%;
+    width: 230px;
+    /* border-radius: 20%; */
 }
 
 
 /* Main content CSS */
 
 .welcome-banner {
-    margin: 2% 0;
+    padding: 100px 0;
+    background-color:  #201F28;
+}
+
+.welcome-banner h2 {
+    color: white;
 }
 
 /* .content-search div {
@@ -68,6 +74,13 @@ header {
     width: 200px;
 }
 
+.film-category div button,
+.film-category div p {
+    background-color: black;
+    color: #CBB26B;
+    border: 1px solid #CBB26B;
+}
+
 /* .film-search {
     width: 100%;
     justify-content: center;
@@ -79,6 +92,6 @@ header {
 footer {
     background-color: black;
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
 }
