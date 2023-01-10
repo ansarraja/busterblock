@@ -11,23 +11,26 @@
 } */
 .container {
  font-size: 16px;
- height: 50%;
  width:fit-content;
+ height: fit-content;
  max-width: 37.5em;
- padding: 3em 1.8em;
+ /* padding: 3em 1.8em; */
  background-color: #201f28;
- position: absolute;
+ /* position: absolute;
  transform: translate(-50%, -50%);
  top: 70%;
- left: 50%;
+ left: 50%; */
  border-radius: 0.6em;
  box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
+ margin-top: 150px;
+ margin-bottom: 150px;
 }
 
 .search-container {
  display: grid;
  grid-template-columns: 9fr 3fr;
  gap: 1.2em;
+ padding: 20px;
 }
 
 .search-container input,
@@ -54,6 +57,10 @@
  border: none;
  cursor: pointer;
  color:#ffffff
+}
+
+#rent {
+    padding: 20px;
 }
 
 .add_btn button {
@@ -126,7 +133,7 @@ h2 {
 .genre div {
  border: 1px solid #a0a0a0;
  font-size: 0.75em;
- padding: 0.4em 1.6em;
+ padding: 0.4em;
  border-radius: 0.4em;
  font-weight: 300;
 }
@@ -148,6 +155,39 @@ p {
  text-align: center;
 }
 
+#film-list {
+    width: 90%;
+}
+
+#film-display div {
+    max-width: 300px;
+    margin: 20px;
+    background-color: #201f28;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+#film-display div .genre,
+ h3,
+ #film-display div .rating,
+ #film-display div h2 {
+    color: white;
+}
+
+#film-display div .poster {
+    height: 250px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+#film-display #rent button {
+    margin: 20px 10px;
+}
+
+.film-heading {
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
  .container {
   font-size: .75em;
@@ -166,9 +206,9 @@ p {
   grid-template-columns: 1fr;
  }
 
- .poster {
+ /* .poster {
   margin: auto;
   width: 20%;
   max-height: 10.8vh;
- }
+ } */
 }
