@@ -34,34 +34,41 @@
     <hr>
     <!-- Could use bootstrap columns here for responsiveness -->
     <main class="container-lg flex-column justify-content-center content-search">
-        <div class="film-category d-flex flex-row justify-content-around align-items-center">
-            <div>
-                <p>Horror</p>
-                <img src="#" alt="poster">
+        <div class="film-category d-flex flex-row justify-content-around align-items-center" id="film-category">
+            <div class="film-list-1">
+                <button class="btn btn-primary btn-lg" data-name="horror">Horror</button>
+                <!-- <img src="#" alt="poster"> -->
+                <ul id="list-1"></ul>
             </div>
-            <div>
-                <p>Comedy</p>
-                <img src="#" alt="poster">
+            <div class="film-list-2">
+                <p class="btn btn-primary btn-lg" data-name="comedy">Comedy</p>
+                <!-- <img src="#" alt="poster"> -->
+                <ul id="list-2"></ul>
             </div>
-            <div>
-                <p>Action</p>
-                <img src="#" alt="poster">
+            <div class="film-list-3">
+                <p class="btn btn-primary btn-lg" data-name="action">Action</p>
+                <!-- <img src="#" alt="poster"> -->
+                <ul id="list-3"></ul>
             </div>
-            <div>
-                <p>Animation</p>
-                <img src="#" alt="poster">
+            <div class="film-list-4">
+                <p class="btn btn-primary btn-lg" data-name="animation">Animation</p>
+                <!-- <img src="#" alt="poster"> -->
+                <ul id="list-4"></ul>
             </div>
         </div>
-    
+
     </main>
 
     <!-- Movies search element  -->
-    <div class="container flex-row justify-content-center">
+    <div class="container justify-content-center">
         <div class="search-container">
-            <input type="text" placeholder="Enter movie name heree..." id="movie-name" value="" />
-            <button id="search-btn">Search</button>
+            <input type="text" placeholder="Enter movie name heree..." id="movie-name" value="Batman" />
+            <button class="btn btn-primary" id="search-btn">Search</button>
         </div>
         <div id="result"></div>
+        <p class="add_btn" id="rent">Rent Charge: £1.99
+            <button class="btn btn-primary" id="rent_btn">Add to cart</button>
+        </p>
     </div>
 
     <!-- Could use bootstrap columns here for responsiveness -->
@@ -78,6 +85,7 @@
         crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
     <script src="films/filmSerach.js"></script>
+    <script src="films/filmslist.js"></script>
 </body>
 
 </html>
