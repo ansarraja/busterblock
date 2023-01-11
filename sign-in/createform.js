@@ -13,8 +13,8 @@ export const createForm = (isRegistered, mainEl) => {
 
     const formContainer = $('<div>');
     formContainer.addClass('form-container');
-    
-    if(!isRegistered) {
+
+    if (!isRegistered) {
 
         let heading = $('<h2>');
         heading.text('Create Account');
@@ -57,14 +57,14 @@ export const createForm = (isRegistered, mainEl) => {
         warningEl.attr('id', 'warning');
 
         createAccountBtn.on('click', (event) => {
-            
+
             event.preventDefault();
 
             createAccount(event, form, mainEl);
 
         })
 
-        
+
 
         form.append(heading, nameLabel, nameInput, emailLabel, emailInput, passwordLabel, passwordInput, passwordConfirmLabel, passwordConfirmInput, createAccountBtn, warningEl);
 
@@ -102,7 +102,7 @@ export const createForm = (isRegistered, mainEl) => {
 
         let warningEl = $('<p>');
         warningEl.attr('id', 'warning');
-        
+
 
         logInBtn.on('click', (event) => {
             event.preventDefault();
@@ -111,7 +111,7 @@ export const createForm = (isRegistered, mainEl) => {
         })
 
         form.append(heading, emailLabel, emailInput, passwordLabel, passwordInput, logInBtn, warningEl);
-        
+
         formContainer.append(form);
 
         formContentContainer.append(formContainer);
