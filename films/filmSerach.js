@@ -20,7 +20,7 @@ let getMovie = () => {
         //If movie exists in database
         if (data.Response == "True") {
           result.innerHTML = `
-            <div class="info">
+            <div class="in Ffo">
                 <img src=${data.Poster} class="poster">
                 <div>
                     <h2>${data.Title}</h2>

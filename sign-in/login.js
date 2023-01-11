@@ -1,5 +1,5 @@
 export const logIn = (event, form, mainEl) => {
-   
+
     const emailInput = document.getElementById('email').value;
 
     const passwordInput = document.getElementById('password').value;
@@ -10,7 +10,7 @@ export const logIn = (event, form, mainEl) => {
 
     const isCorrectEmail = getUsersArr.find(({ email }) => email === emailInput);
 
-    if(!isCorrectEmail || !(isCorrectEmail.password === passwordInput)) {
+    if (!isCorrectEmail || !(isCorrectEmail.password === passwordInput)) {
 
         warningEl.text("Password or email are not correct - please check");
 
@@ -23,7 +23,7 @@ export const logIn = (event, form, mainEl) => {
         let responseContainer = $('<div>');
         responseContainer.addClass('d-flex flex-column align-items-center')
 
-        let greenTick = $('<div>');
+        let greenTick = $('<div>'); F
         greenTick.addClass('green-tick d-flex justify-content-center align-items-center m-3');
         let tick = $('<p>');
         tick.text("✓");
