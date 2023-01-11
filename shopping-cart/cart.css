@@ -1,0 +1,66 @@
+body {
+    background-color: #CBB26B;
+}
+
+#basket-display {
+    width: 90%;
+    background-color: #201F28;
+    color: white;
+    margin: 50px 0;
+}
+
+#basket-display h2,
+#basket-display a {
+    margin: 40px;
+    text-align: center;    
+}
+
+#basket-display a {
+    text-decoration: none;
+    color: #CBB26B;
+    border: 1px solid #CBB26B;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.items-container {
+    width: 90%;
+    margin: 20px 0;
+}
+
+.basket-container {
+    width: 90%;
+}
+
+.price-el {
+    background-color: rgb(40, 145, 40);
+    padding: 10px;
+    width: 60px;
+    border-radius: 10px;
+}
+
+.item-name-el {
+    background-color: #CBB26B;
+    color: black;
+    padding: 10px;
+    min-width: 200px;
+    border-radius: 10px;
+}
+
+hr {
+    background-color: white;
+}
+
+.total-el {
+
+}
+
+.pay-button {
+    margin: 20px;
+    background-color: black;
+    color: #CBB26B;
+    border: 1px solid #CBB26B;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 20px;
+}
