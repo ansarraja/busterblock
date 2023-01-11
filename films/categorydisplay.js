@@ -7,7 +7,7 @@ let categoryDisplay = $("#film-display");
 //Function to fetch data from API
 export let getMovie = (moviename) => {
   let movieName = moviename;
-  let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
+  let url = `https://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
 
   categoryDisplay.empty();
 

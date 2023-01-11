@@ -6,7 +6,7 @@ var comedyFilms = ["Happy Gilmore", "White Chicks", "Hear no evil, speak no evil
 
 var actionFilms = ["The Northman", "Wakanda Forever", "The Batman", "Thor", "Iron Man 2", "Death Race 2", "The Spy Next Door", "Shank", "13 Assassins", "The King of Fighters"]
 
-var horrorFilms = ["The Evil Dead", "The Exorcist", "The Changeling", "The Sixth Sense", "Psycho", "The Texas Chain Saw Massacre", "Pieces", "Saw", "It", "Screem"]
+var horrorFilms = ["The Evil Dead", "The Exorcist", "The Changeling", "The Sixth Sense", "Psycho", "The Texas Chain Saw Massacre", "Pieces", "Saw", "It", "Scream"]
 
 $("#film-category").on("click", ".btn", function (event) {
 
