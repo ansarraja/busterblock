@@ -23,7 +23,7 @@ export const logIn = (event, form, mainEl) => {
         let responseContainer = $('<div>');
         responseContainer.addClass('d-flex flex-column align-items-center')
 
-        let greenTick = $('<div>'); F
+        let greenTick = $('<div>');
         greenTick.addClass('green-tick d-flex justify-content-center align-items-center m-3');
         let tick = $('<p>');
         tick.text("✓");
