@@ -1,29 +1,29 @@
 import { createForm } from "./createform.js";
 
-(function() {
+(function () {
 
     const mainEl = $("#form-display");
     mainEl.empty();
 
     let logIn = localStorage.getItem('login');
 
-    if(!logIn) {
+    if (!logIn) {
 
         const signUpCard = $('<div>');
         signUpCard.addClass('login-card d-flex justify-content-center align-items-center');
 
         const signInContainer = $('<div>');
         signInContainer.addClass('col-md-6 col-12 d-flex justify-content-center align-items-center sign-in-container');
-    
+
         const signInButton = $('<button>');
         signInButton.text('Sign In');
         signInButton.addClass('sign-in-btn')
         signInButton.attr('id', 'sign-in');
-    
+
         signInButton.on('click', () => {
-    
+
             createForm(true, mainEl);
-    
+
         })
 
         signUpCard.append(signInButton);
@@ -33,26 +33,26 @@ import { createForm } from "./createform.js";
 
         const signInCard = $('<div>');
         signInCard.addClass('login-card d-flex justify-content-center align-items-center');
-    
+
         const signUpContainer = $('<div>');
         signUpContainer.addClass('col-md-6 col-12 d-flex justify-content-center align-items-center sign-up-container');
-    
+
         const signUpButton = $('<button>');
         signUpButton.text('Create Account');
         signUpButton.addClass('sign-up-btn')
         signUpButton.attr('id', 'sign-up');
-    
+
         signUpButton.on('click', () => {
-    
+
             createForm(false, mainEl);
-    
+
         })
 
         signInCard.append(signUpButton);
         signUpContainer.append(signInCard);
 
         mainEl.append(signUpContainer);
-        
+
     }
 
     else {
@@ -86,6 +86,6 @@ import { createForm } from "./createform.js";
         mainEl.append(welcomeContainer);
 
     }
-    
+
 
 })();

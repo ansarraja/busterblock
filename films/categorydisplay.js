@@ -73,7 +73,7 @@ export let getMovie = (moviename) => {
 
         });
 
-        categoryDisplay.append(result);
+          categoryDisplay.append(result);
 
         }
         //If movie does NOT exists in database
