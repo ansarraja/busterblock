@@ -60,6 +60,12 @@ header {
     background-color: #201F28;
 }
 
+.welcome-banner img {
+    height: 100px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
 .welcome-banner h2 {
     color: white;
 }
