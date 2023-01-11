@@ -70,9 +70,16 @@ header {
 .film-category div {
     height: 100px;
     background-color: gray;
-    margin: 30px;
+    margin: 2%;
     width: 200px;
 }
+
+.film-category img {
+    height: 100px;
+    background-color: gray;  
+    width: 200px;
+}
+
 
 .film-category div button,
 .film-category div p {
