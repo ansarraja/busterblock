@@ -3,9 +3,11 @@ var key = "1c7cf7f2";
 let movieNameElement = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
+let resultDisplay = $('#result');
 
 //Function to fetch data from API
 let getMovie = () => {
+  resultDisplay.empty();
   let movieName = movieNameElement.value;
   let url = `https://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
   //If input field is empty
@@ -19,11 +21,11 @@ let getMovie = () => {
       .then((data) => {
         //If movie exists in database
         if (data.Response == "True") {
-          result.innerHTML = `
-            <div class="in Ffo">
+          let searchDisplay = $(`
+            <div class="info">
                 <img src=${data.Poster} class="poster">
                 <div>
-                    <h2>${data.Title}</h2>
+                    <h2 id="film-name">${data.Title}</h2>
                     <div class="rating">
                         <img src="./films/star-icon.svg">
                         <h4>${data.imdbRating}</h4>
@@ -45,7 +47,32 @@ let getMovie = () => {
             <p class="add_btn" id="rent">Rent Charge: £1.99
             <button class="btn btn-primary" id="rent_btn">Add to cart</button>
             </p>           
-        `;
+        `).on('click', "#rent_btn", () => {
+          console.log('clicked');
+
+          let filmName = data.Title;
+
+          let price = 1.99;
+
+          let filmObj = {
+            filmName: filmName,
+            price: price
+          };
+
+          let basket = localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')) : [];
+
+          basket.push(filmObj);
+
+          let basketStr = JSON.stringify(basket);
+
+          localStorage.setItem('basket', basketStr);
+
+          console.log(data.Title);
+        
+        });
+
+        resultDisplay.append(searchDisplay);
+
         }
         //If movie does NOT exists in database
         else {
