@@ -116,3 +116,8 @@ body {
     border-radius: 5px;
     margin: 35px;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
