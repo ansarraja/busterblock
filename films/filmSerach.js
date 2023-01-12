@@ -68,6 +68,14 @@ let getMovie = () => {
           localStorage.setItem('basket', basketStr);
 
           console.log(data.Title);
+
+          let filmAddDisplay = document.getElementById('film-added');
+
+          filmAddDisplay.classList.toggle('show');
+
+          setTimeout(() => {
+            filmAddDisplay.classList.toggle('show');
+          }, 4000)
         
         });
 
