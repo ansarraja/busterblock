@@ -39,6 +39,7 @@ Movie rental application that allows user to search films by category or individ
 ## Deployed application  
 
 [Link](https://ansarraja.github.io/busterblock/)  
+![image](https://user-images.githubusercontent.com/56542637/212180316-ea97e0ac-a9b1-4e8f-9a1d-fa13ea2d12d8.png)
 
 
 ## Contributers  
