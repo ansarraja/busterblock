@@ -113,8 +113,8 @@ header {
 footer {
     background-color: black;
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
 }
 
 footer p{
