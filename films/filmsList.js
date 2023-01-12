@@ -18,10 +18,6 @@ $("#film-category").on("click", ".btn", function (event) {
 
     let seacrhCriteria = horrorFilms;
     for (var i = 0; i < seacrhCriteria.length; i++) {
-      //    var li = document.createElement("li");
-      //    li.textContent = seacrhCriteria[i];
-      //    $("#list-1").append(li);
-
       getMovie(seacrhCriteria[i]);
     }
   };
@@ -29,10 +25,6 @@ $("#film-category").on("click", ".btn", function (event) {
   if (filmGenre === "comedy") {
     let seacrhCriteria = comedyFilms;
     for (var i = 0; i < seacrhCriteria.length; i++) {
-      //    var li = document.createElement("li");
-      //    li.textContent = seacrhCriteria[i];
-      //    $("#list-2").append(li);
-
       getMovie(seacrhCriteria[i]);
 
     }
@@ -42,10 +34,6 @@ $("#film-category").on("click", ".btn", function (event) {
   if (filmGenre === "action") {
     let seacrhCriteria = actionFilms;
     for (var i = 0; i < seacrhCriteria.length; i++) {
-      //    var li = document.createElement("li");
-      //    li.textContent = seacrhCriteria[i];
-      //    $("#list-3").append(li);
-
       getMovie(seacrhCriteria[i]);
 
     }
@@ -54,10 +42,6 @@ $("#film-category").on("click", ".btn", function (event) {
   if (filmGenre === "animation") {
     let seacrhCriteria = animationFilms;
     for (var i = 0; i < seacrhCriteria.length; i++) {
-      //    var li = document.createElement("li");
-      //    li.textContent = seacrhCriteria[i];
-      //    $("#list-4").append(li);
-
       getMovie(seacrhCriteria[i]);
 
     }

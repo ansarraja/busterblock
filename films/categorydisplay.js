@@ -1,7 +1,4 @@
 var key = "1c7cf7f2";
-// let movieNameElement = document.getElementById("movie-name");
-let searchBtn = document.getElementById("search-btn");
-// let result = document.getElementById("result");
 let categoryDisplay = $("#film-display");
 
 //Function to fetch data from API
@@ -48,9 +45,7 @@ export let getMovie = (moviename) => {
                 <button class="btn btn-primary" id="rent_btn">Add to cart</button>
                 </p>           
             </div>
-        `).on('click', "#rent_btn", () => {
-            console.log('clicked')
-            
+        `).on('click', "#rent_btn", () => {            
 
             let filmName = data.Title;
 
@@ -67,10 +62,8 @@ export let getMovie = (moviename) => {
 
           let basketStr = JSON.stringify(basket);
 
-          localStorage.setItem('basket', basketStr);
+          localStorage.setItem('basket', basketStr);            
             
-            console.log(data.Title);
-
             let filmAddDisplay = document.getElementById('film-added');
 
             filmAddDisplay.classList.toggle('show');
@@ -95,4 +88,3 @@ export let getMovie = (moviename) => {
       });
   }
 };
-// searchBtn.addEventListener("click", getMovie);
