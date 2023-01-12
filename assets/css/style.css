@@ -60,14 +60,19 @@ header {
     background-color: #201F28;
 }
 
-.welcome-banner img {
+/* .welcome-banner img {
     height: 100px;
     width: 150px;
     margin-bottom: 20px;
-}
+} */
 
-.welcome-banner h2 {
+.welcome-banner {
     color: white;
+    background-image:url("/assets/images/curtain-152112_960_720.png");
+    background-size: 500px 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 /* .content-search div {
@@ -108,10 +113,13 @@ header {
 footer {
     background-color: black;
     width: 100%;
-    /* position: fixed;
-    bottom: 0; */
+    position: fixed;
+    bottom: 0;
 }
 
+footer p{
+    color: rgb(205, 201, 201);
+}
 @media screen and (max-width: 768px) {
     .nav a {
         font-size: 1em;
