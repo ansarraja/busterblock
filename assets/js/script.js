@@ -15,8 +15,7 @@ $.ajax({
  gif_El.attr("src", results[0].images.fixed_width_downsampled.url);
 
  $(".film-list-1").append(gif_El);
- console.log(i);
-
+ 
 });
 
 // query url for comedy giphy
@@ -30,7 +29,6 @@ $.ajax({
  gif_El.attr("src", results[0].images.fixed_width_downsampled.url);
 
  $(".film-list-2").append(gif_El);
- console.log(i);
 
 });
 
@@ -59,6 +57,5 @@ $.ajax({
  gif_El.attr("src", results[0].images.fixed_width_downsampled.url);
 
  $(".film-list-4").append(gif_El);
- console.log(i);
 
 });
