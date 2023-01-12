@@ -118,3 +118,17 @@ footer {
     }
     
 }
+
+
+.film-added {
+    width: 100%;
+    position: fixed;
+    color: white;
+    background-color: green;
+    text-align: center;
+    display: none;
+}
+
+.film-added.show {
+    display: block;
+}

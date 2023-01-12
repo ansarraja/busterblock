@@ -71,6 +71,14 @@ export let getMovie = (moviename) => {
             
             console.log(data.Title);
 
+            let filmAddDisplay = document.getElementById('film-added');
+
+            filmAddDisplay.classList.toggle('show');
+  
+            setTimeout(() => {
+              filmAddDisplay.classList.toggle('show');
+            }, 4000)
+
         });
 
           categoryDisplay.append(result);
