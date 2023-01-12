@@ -61,7 +61,7 @@ header {
 
 .welcome-banner {
     color: white;
-    background-image:url("/assets/images/curtain-152112_960_720.png");
+    background-image:url(../images/curtain-152112_960_720.png);
     background-size: 60% 70%;
     background-repeat: no-repeat;
     background-position: center;
