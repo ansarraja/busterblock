@@ -28,6 +28,7 @@ h1 {
 
 header {
     background-color: rgb(37, 37, 37);
+    width: 100%;
 }
 
 /* CSS Animations */
@@ -36,8 +37,8 @@ header {
 /* Navigation CSS */
 
 .navlinks a {
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 5px;
     color: #CBB26B;
     font-size: clamp(16px, 2.5vh, 25px);
 }
@@ -69,7 +70,7 @@ header {
 .welcome-banner {
     color: white;
     background-image:url("/assets/images/curtain-152112_960_720.png");
-    background-size: 500px 200px;
+    background-size: 60% 70%;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -120,9 +121,44 @@ footer {
 footer p{
     color: rgb(205, 201, 201);
 }
+
 @media screen and (max-width: 768px) {
+    #logo {
+        width: 130px;
+        height: 80px;
+    }
+
     .nav a {
         font-size: 1em;
+    }
+
+    /* .logo {
+        width: 100%;
+        justify-content: center;
+    } */
+}
+
+@media screen and (max-width: 600px) {
+    .nav a {
+        font-size: 1em;
+    }
+
+    .welcome-banner h2 {
+        font-size: 0.75em;
+    }
+
+    #logo {
+        width: 130px;
+        height: 80px;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navlinks {
+        width: 100%;
     }
     
 }
